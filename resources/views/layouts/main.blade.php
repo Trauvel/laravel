@@ -11,16 +11,41 @@
 </head>
 
 <body>
-    <div>
-        <nav>
-            <a href="{{ route('main.index') }}">Main</a>
-            <a href="{{ route('about.index') }}">About</a>
-            <a href="{{ route('post.index') }}">Posts</a>
-            <a href="{{ route('contact.index') }}">Contacts</a>
-        </nav>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg bg-light">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page"
+                                        href="{{ route('main.index') }}">Main</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('about.index') }}">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('post.index') }}">Posts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('contact.index') }}">Contacts</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-10">
+                @yield('content')
+            </div>
+            <div class="col"></div>
+        </div>
     </div>
 
-    @yield('content')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
